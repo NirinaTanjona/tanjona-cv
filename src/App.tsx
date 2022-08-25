@@ -1,7 +1,13 @@
-import Button from '@mui/material/Button';
+import Header from './components/Header'
+import CssBaseline from '@mui/material/CssBaseline';
 
 function App() {
-  return <Button variant="contained">Hello Tanjona</Button>;
+  return (
+    <div>
+      <CssBaseline />
+      <Header />
+    </div>
+  )
 }
 
-export default App;
+export default App
