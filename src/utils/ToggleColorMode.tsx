@@ -1,7 +1,7 @@
 import React, { useState, useMemo, createContext } from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import getDesignTokens from '../theme'
-import { PaletteMode } from '@mui/material'
+import { getDesignTokens } from '../theme'
+import { PaletteMode, useMediaQuery } from '@mui/material'
 
 interface Props {
   children: JSX.Element,
@@ -16,7 +16,8 @@ interface AppContext {
 export const ColorModeContext = createContext<AppContext>({mode: 'light', setMode: () => {}, toggleColorMode: () => {}})
 
 const ToggleColorMode: React.FC<Props> = ({ children }) => {
-  const [mode, setMode] = useState<PaletteMode>('light');
+  const prefersDarkMode = useMediaQuery('(preferes-color-scheme: dark)')
+  const [mode, setMode] = useState<PaletteMode>(prefersDarkMode ? 'dark' : 'light');
 
   const toggleColorMode = () => {
     setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
