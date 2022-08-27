@@ -4,10 +4,7 @@ import { Activity } from './Activity'
 
 const Statistic = () => {
   return (
-    <Stack
-      direction="row"
-      spacing={2}
-    >
+    <Stack direction="row" spacing={2}>
       <TopLangage />
       <Activity />
     </Stack>

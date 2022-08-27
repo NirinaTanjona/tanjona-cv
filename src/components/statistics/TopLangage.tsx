@@ -23,11 +23,6 @@ const primary = {
   900: '#003A75',
 };
 
-const secondary = {
-  red: '#F53803',
-  yellow: '#F5D020'
-}
-
 const CircularProgressWithLabel = (
   props: CircularProgressProps & { value: number },
 ) => {
@@ -103,7 +98,8 @@ export const TopLangage = () => {
         flexDirection: 'column',
         minWidth: 235,
         minHeight: 214,
-        p: 2.5
+        p: 2.5,
+        borderRadius: `${theme.shape.borderRadius}px 0px 0px ${theme.shape.borderRadius}px`,
       }}
       >
         <Box
