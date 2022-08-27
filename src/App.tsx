@@ -1,5 +1,6 @@
 import Header from './components/header'
 import About from './components/aboutme'
+import Statistic from './components/statistics'
 import { CssBaseline, Container, Stack } from '@mui/material';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
         <CssBaseline />
         <Header />
         <About />
+        <Statistic />
       </Stack>
     </Container>
   )
