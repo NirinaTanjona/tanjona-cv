@@ -1,4 +1,4 @@
-import { Typography, Paper, Box} from '@mui/material'
+import { Typography, Paper, Box, Container} from '@mui/material'
 
 const About = () => {
   return (
@@ -23,4 +23,15 @@ const About = () => {
   )
 }
 
-export default About
+const AboutLayout = () => {
+  return (
+    <Box>
+      <Container maxWidth="md">
+        <About/>
+      </Container>
+    </Box>
+  )
+}
+
+
+export default AboutLayout

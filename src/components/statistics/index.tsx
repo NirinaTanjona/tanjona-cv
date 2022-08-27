@@ -1,4 +1,4 @@
-import { Stack } from '@mui/material'
+import { Stack, Box, Container } from '@mui/material'
 import { TopLangage } from './TopLangage'
 import { Activity } from './Activity'
 
@@ -11,4 +11,14 @@ const Statistic = () => {
   )
 }
 
-export default Statistic
+const StatisticLayout = () => {
+  return (
+    <Box>
+      <Container maxWidth="md">
+        <Statistic/>
+      </Container>
+    </Box>
+  )
+}
+
+export default StatisticLayout

@@ -2,7 +2,27 @@ import { PaletteMode } from '@mui/material'
 import { createTheme } from '@mui/material/styles'
 import 'cal-sans'
 
-//From Material UI Colorsheme
+declare module '@mui/material/styles/createPalette' {
+  interface ColorRange {
+    50: string;
+    100: string;
+    200: string;
+    300: string;
+    400: string;
+    500: string;
+    600: string;
+    700: string;
+    800: string;
+    900: string;
+  }
+
+  interface PaletteColor extends ColorRange {}
+
+  interface Palette {
+    primaryDark: PaletteColor;
+  }
+}
+
 export const blue = {
   50: '#F0F7FF',
   100: '#C2E0FF',
