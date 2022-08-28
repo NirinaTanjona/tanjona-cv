@@ -167,3 +167,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     }
   }
 })
+
+export const darkTheme = createTheme({
+  ...getDesignTokens('dark')
+})

@@ -1,8 +1,29 @@
 import { Typography, Box, Container } from '@mui/material'
 import { SkillsContainer } from './SkillsContainer'
 
-
   const designSkills = [
+    {
+      src: 'logos/figma.svg',
+      srcSet: 'logos/figma.svg',
+      name: 'Figma',
+      description: 'UI and UX design before development',
+    },
+    {
+      src: 'logos/adobeIllustrator.svg',
+      srcSet: 'logos/adobeIllustrator.svg',
+      name: 'Adobe Illustrator',
+      description: 'Creating or editing some logos or illustrations',
+    },
+    {
+      src: 'logos/adobePhotoshop.svg',
+      srcSet: 'logos/adobePhotoshop.svg',
+      name: 'Adobe Photoshop',
+      description: 'Editing images to fit design requirement',
+    },
+  ];
+
+
+  const frontendSkills = [
     {
       src: 'logos/figma.svg',
       srcSet: 'logos/figma.svg',
@@ -29,7 +50,8 @@ import { SkillsContainer } from './SkillsContainer'
         <Box sx={{ mb: 1, display: 'flex', justifyContent: 'center' }}>
           <Typography variant="h1" color="text.primary">Skills</Typography>
         </Box>
-        <SkillsContainer skillsList={designSkills} title="design" />
+        <SkillsContainer skillsList={ designSkills } title="Design" />
+        <SkillsContainer skillsList={ frontendSkills } title="Frontend" />
       </Box>
   )
 }
