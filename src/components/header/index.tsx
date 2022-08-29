@@ -4,13 +4,7 @@ import { useTheme } from '@mui/material/styles'
 import Brightness4Icon from '@mui/icons-material/Brightness4'
 import Brightness7Icon from '@mui/icons-material/Brightness7'
 import { ColorModeContext } from '../../utils/ToggleColorMode'
-import { styled } from '@mui/material/styles';
-
-const Span = styled('span')<{
-  color?: 'primary' | 'error' | 'success' | 'warning';
-}>(({ theme }) => ({
-  color: theme.palette.primary.main
-}));
+import Span from '../Span'
 
 const Header = () => {
   const theme = useTheme();

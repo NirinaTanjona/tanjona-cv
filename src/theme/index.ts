@@ -1,5 +1,5 @@
 import { PaletteMode } from '@mui/material'
-import { createTheme } from '@mui/material/styles'
+import { createTheme, alpha, Theme } from '@mui/material/styles'
 import 'cal-sans'
 
 declare module '@mui/material/styles/createPalette' {
@@ -72,6 +72,7 @@ export const getDesignTokens = (mode: PaletteMode) => ({
         main: blue[400],
       }),
     },
+    divider: mode === 'dark' ? alpha(blue[100], 0.08) : grey[100],
     primaryDark: blueDark,
     ...(mode === 'dark' && {
       background: {
@@ -163,10 +164,28 @@ export const getDesignTokens = (mode: PaletteMode) => ({
     subtitle1: {
       fontFamily: 'Cal Sans',
       fontSize: defaultTheme.typography.pxToRem(15), // 16px
+      color: mode === 'dark' ? '#ffffff' : grey[800],
       letterSpacing: 1,
     }
   }
 })
+
+export const getThemedComponents = (theme: Theme): { components: Theme['components'] } => {
+  return {
+    components: {
+      MuiDivider: {
+        styleOverrides: {
+          root: {
+            borderColor:
+              theme.palette.mode === 'dark'
+                ? alpha(theme.palette.primary[100], 0.08)
+                : theme.palette.grey[100],
+          },
+        },
+      },
+    }
+  }
+}
 
 export const darkTheme = createTheme({
   ...getDesignTokens('dark')

@@ -1,6 +1,7 @@
 import React, { useState, useMemo, createContext } from 'react';
+import { deepmerge } from '@mui/utils'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { getDesignTokens } from '../theme'
+import { getDesignTokens, getThemedComponents } from '../theme'
 import { PaletteMode, useMediaQuery } from '@mui/material'
 
 interface Props {
@@ -23,9 +24,12 @@ const ToggleColorMode: React.FC<Props> = ({ children }) => {
     setMode((prevMode) => (prevMode === 'light' ? 'dark' : 'light'));
   };
 
-  const theme = useMemo(() => createTheme({
-    ...getDesignTokens(mode)
-  }), [mode]);
+  const theme = useMemo(() => {
+    const designTokens = getDesignTokens(mode)
+    let newTheme = createTheme(designTokens)
+    newTheme = deepmerge(newTheme, getThemedComponents(newTheme))
+    return newTheme;
+  }, [mode])
 
   return (
     <ColorModeContext.Provider value={{ mode, setMode, toggleColorMode }}>
