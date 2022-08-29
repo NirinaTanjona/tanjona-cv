@@ -26,7 +26,7 @@ const About = () => {
 const AboutLayout = () => {
   return (
     <Box>
-      <Container maxWidth="md" sx={{ mb: 10 }}>
+      <Container id="about" maxWidth="md" sx={{ mb: 10 }}>
         <About/>
       </Container>
     </Box>

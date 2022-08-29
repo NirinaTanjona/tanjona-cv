@@ -43,7 +43,7 @@ const ProjectsLayout = () => {
             `linear-gradient(85deg, ${theme.palette.primaryDark[700]} 0%, ${theme.palette.primaryDark[600]} 100%)`,
           }}
       >
-        <Container sx={{ py: { xs: 4, sm: 6, md: 8 }, alignItems: 'center'}}>
+        <Container id="project" sx={{ py: { xs: 4, sm: 6, md: 8 }, alignItems: 'center'}}>
           <Projects/>
         </Container>
       </Box>

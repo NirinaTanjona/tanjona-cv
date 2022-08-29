@@ -10,7 +10,7 @@ const Header = () => {
   const theme = useTheme();
   const { toggleColorMode } = useContext(ColorModeContext);
   return (
-    <Container maxWidth="md">
+    <Container id="header" maxWidth="md">
       <Stack
         direction="row"
         justifyContent="space-between"

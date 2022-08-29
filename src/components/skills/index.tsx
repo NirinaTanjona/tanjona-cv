@@ -66,7 +66,7 @@ const SkillsLayout = () => {
             : `linear-gradient(180deg, ${theme.palette.grey[50]} 0%, #FFFFFF 100%)`,
       }}
     >
-      <Container sx={{ py: { xs: 4, sm: 6, md: 8 }, alignItems: 'center'}}>
+      <Container id="skill" sx={{ py: { xs: 4, sm: 6, md: 8 }, alignItems: 'center'}}>
         <Skills/>
       </Container>
     </Box>
