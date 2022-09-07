@@ -1,6 +1,5 @@
-import { Container, Box, Typography, Grid, Divider } from '@mui/material'
+import { Container, Box, Typography, Grid } from '@mui/material'
 import { ThemeProvider } from '@mui/material/styles'
-import SpaIcon from '@mui/icons-material/Spa';
 import { darkTheme } from '../../theme'
 import { Description } from './description'
 
