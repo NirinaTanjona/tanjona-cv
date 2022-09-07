@@ -1,7 +1,9 @@
-import { Typography, Paper, Box, Container} from '@mui/material'
+import { Typography, Paper, Box, Container, Stack} from '@mui/material'
+import { SocialLink } from './socialLink'
 
 const About = () => {
   return (
+    <Stack direction="column" spacing={4}>
     <Paper variant="outlined" sx={{ p: 2.5, height: '100%' }}>
       <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
         <Typography
@@ -14,12 +16,12 @@ const About = () => {
         </Typography>
       </Box>
       <Typography variant="body2" color="text.secondary">
-        Follow the video tutorial above. Understand how to use each tool in the Figma application.
-        Also learn how to make a good and correct design. Starting from spacing, typography, content,
-        and many other design hierarchies. Then try to make it yourself with your imagination
-        and inspiration.
+      I am an engineer in automation and industrial computing but I am especially passionate about IT in
+      general, particularly in the field of web development, AI and any other innovative technology.
       </Typography>
     </Paper>
+    <SocialLink />
+    </Stack>
   )
 }
 

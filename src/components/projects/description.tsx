@@ -1,5 +1,6 @@
 import { Typography, Stack } from '@mui/material'
 import Span from '../Span'
+import { ChipGithub } from './ChipGithub'
 
 export const Description = () => {
   return (
@@ -8,18 +9,17 @@ export const Description = () => {
         A <Span>Plant</Span> disease detection app
       </Typography>
       <Typography>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-      et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-      aliquip ex ea commodo consequat.
+        This is my graduation project, it is based on plant's leaf disease detection using deep learning.
+        the library used is tensorflow, the model is then deployed in flask backend and React for the UI.
       </Typography>
       <Typography variant="subtitle1" sx={{ my: 1.5 }}>
         Usage
       </Typography>
       <Typography>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat.
+        Take a clear photo of the leaf of a diseased plant and press the button detect desease. But take note
+        that this is still a prototype and the number of disease in the model is limited
       </Typography>
+      <ChipGithub />
     </Stack>
   )
 }

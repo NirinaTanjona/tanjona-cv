@@ -1,7 +1,8 @@
 import { Box, Typography, Card } from '@mui/material'
 import { ThemeProvider, createTheme } from '@mui/material/styles'
-import 'cal-sans'
 import CircularProgress, {CircularProgressProps} from '@mui/material/CircularProgress'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import 'cal-sans'
 
 declare module '@mui/material/Paper' {
   interface PaperPropsVariantOverrides {
@@ -27,8 +28,8 @@ const CircularProgressWithLabel = (
   props: CircularProgressProps & { value: number },
 ) => {
   return (
-    <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" {...props} size={70}/>
+    <Box sx={{ position: 'relative', display: 'inline-flex', py: 2 }}>
+      <CircularProgress variant="determinate" {...props} size={65}/>
       <Box
         sx={{
           top: 0,
@@ -91,15 +92,17 @@ export const theme = createTheme({
 });
 
 export const TopLangage = () => {
+  const matches = useMediaQuery(theme.breakpoints.down('sm'))
+  const borderRadius = theme.shape.borderRadius
   return (
     <ThemeProvider theme={theme}>
       <Card variant="gradient" sx={{
         display: 'flex',
         flexDirection: 'column',
-        minWidth: 235,
-        minHeight: 214,
+        width: '100%',
+        height: '100%',
         p: 2.5,
-        borderRadius: `${theme.shape.borderRadius}px 0px 0px ${theme.shape.borderRadius}px`,
+        borderRadius: matches ? `${borderRadius}px ${borderRadius}px 0px 0px` : `${borderRadius}px 0px 0px ${borderRadius}px`,
       }}
       >
         <Box

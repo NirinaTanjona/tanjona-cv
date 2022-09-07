@@ -26,7 +26,7 @@ export const SkillsContainer = ({ skillsList, title }: Props ) => {
         {title}
         </Typography>
       </Box>
-      <Grid container justifyContent="center" spacing={{ xs: 2, md: 4}}>
+      <Grid container justifyContent="start" spacing={{ xs: 2, md: 4}}>
           {skillsList.map((item) => (
           <Grid item xs={12} sm={6} md={4}>
             <SkillCard logoSize={64} item={item}/>

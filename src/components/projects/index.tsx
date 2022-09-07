@@ -10,17 +10,14 @@ const Projects = () => {
       <Box sx={{ mb: 1, display: 'flex', justifyContent: 'center' }}>
         <Typography variant="h1" color="text.primary">Projects</Typography>
       </Box>
-      <Container sx={{ my: 2 }}>
-        <Grid container spacing={2} sx={{ alignItems: 'center', marginTop: 0}}>
-          <Grid item xs>
+      <Container sx={{ my: 1 }}>
+        <Grid container spacing={4} sx={{ alignItems: 'center', marginTop: 0}}>
+          <Grid item md={6}>
             <Box maxWidth={500}>
             <Description />
             </Box>
           </Grid>
-          <Divider orientation="vertical" flexItem>
-            <Typography><SpaIcon /></Typography>
-          </Divider>
-          <Grid item xs>
+          <Grid item md={6}>
             <Box
               component='img'
               alt='project demo'
