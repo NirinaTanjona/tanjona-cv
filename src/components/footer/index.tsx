@@ -77,8 +77,8 @@ const Footer = () => {
       <Stack direction="column" spacing={1}>
         <Typography variant="subtitle1">Topics</Typography>
         {localGroup.map(({ href, label }) => (
-          <li>
-            <Link key={href} href={href} underline="hover" color="text.secondary">
+          <li key={href}>
+            <Link href={href} underline="hover" color="text.secondary">
               {label}
             </Link>
           </li>
@@ -87,8 +87,8 @@ const Footer = () => {
       <Stack direction="column" spacing={1}>
       <Typography variant="subtitle1">Contacts</Typography>
         {externalGroup.map(({ href, label }) => (
-          <li>
-            <Link target="_blank" key={href} href={href} underline="hover" color="text.secondary">
+          <li key={href}>
+            <Link target="_blank" href={href} underline="hover" color="text.secondary">
             {label}
             </Link>
           </li>
