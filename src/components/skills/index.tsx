@@ -31,49 +31,37 @@ import { SkillsContainer } from './SkillsContainer'
       description: 'Declarative, Component-Based library for web development.',
     },
     {
-      src: 'logos/next.svg',
-      srcSet: 'logos/next.svg',
-      name: 'Next js',
-      description: 'React framework for production.',
-    },
-    {
       src: 'logos/mui.png',
       srcSet: 'logos/mui.png',
       name: 'material UI',
       description: 'fast, cool and intuitive React UI tools.',
     },
-    {
-      src: 'logos/chakra.jpg',
-      srcSet: 'logos/chakra.jpg',
-      name: 'chakra UI',
-      description: 'simple, and accessible component for React UI.',
-    },
-    {
-      src: 'logos/tailwind.png',
-      srcSet: 'logos/tailwind.png',
-      name: 'Tailwindcss',
-      description: 'Css framework packed with HTML classes.',
-    },
   ];
 
   const backendSkills = [
     {
-      src: 'logos/nodejs.png',
-      srcSet: 'logos/nodejs.png',
-      name: 'Node Js',
-      description: 'Node is a Javascript back-end runtime environment',
+      src: 'logos/django.png',
+      srcSet: 'logos/django.png',
+      name: 'Django',
+      description: 'high-level Python web framework that encourages rapid development and clean.',
     },
     {
-      src: 'logos/rails.png',
-      srcSet: 'logos/rails.png',
-      name: 'Ruby on Rails',
-      description: 'Rails is a fullstack framework, built with ruby.',
+      src: 'logos/drf.png',
+      srcSet: 'logos/drf.png',
+      name: 'Django Rest Framework',
+      description: 'Django REST framework is a powerful and flexible toolkit for building Web APIs.',
     },
     {
-      src: 'logos/spring.png',
-      srcSet: 'logos/spring.png',
-      name: 'Spring boot',
-      description: 'Enterprise-level framework for creating standalone app that run on Java Virtual Machine',
+      src: 'logos/flask.png',
+      srcSet: 'logos/flask.png',
+      name: 'Flask',
+      description: 'Flask is a lightweight WSGI web application framework.',
+    },
+    {
+      src: 'logos/fastapi.png',
+      srcSet: 'logos/fastapi.png',
+      name: 'Fastapi',
+      description: 'FastAPI is a modern, fast (high-performance), web framework for building APIs.',
     },
   ];
 

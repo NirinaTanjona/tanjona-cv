@@ -16,7 +16,7 @@ interface Props {
 export const SkillsContainer = ({ skillsList, title }: Props ) => {
   return (
     <Box sx={{ mb: 3 }}>
-      <Box sx={{ mb: 3, display: 'flex', justifyContent: 'center' }}>
+      <Box sx={{ mb: 3, display: 'flex', justifyContent: 'center'}}>
         <Typography
           fontWeight="bold"
           component="h3"
